@@ -1,0 +1,8 @@
+sudo apt-get install virtualenv
+python3 -m venv ansible_tutor
+source ansible_tutor/bin/activate
+pip install ansible
+vagrant up
+ansible-playbook -i hosts setup.yml
+ansible -m ping all -i hosts
+
